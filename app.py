@@ -31,24 +31,148 @@ DELIVERY_ONLY_KEYWORDS = [
     "virtual kitchen", "dark kitchen", "online only",
 ]
 
-# Chain blacklist
-FAST_FOOD_KEYWORDS = [
-    "mcdonald", "kfc", "burger king", "subway",
-    "pizza hut", "domino", "starbucks", "coffee bean",
-    "texas chicken", "jollibee", "carl's jr",
-    "long john", "shake shack", "five guys",
-    "ya kun", "yakun", "toast box", "old chang kee",
-    "old changkee", "liho", "koi", "paris baguette",
-    "breadtalk", "stuff'd", "stuffd", "sushi express",
-    "saizeriya", "dian xiao er", "swensen", "swensen's",
-    "killiney", "fun toast",
+# ========= GLOBAL CHAINS BLACKLIST (AGGRESSIVE) =========
+
+# FAST FOOD - Global
+GLOBAL_FAST_FOOD = [
+    "mcdonald", "kfc", "burger king", "subway", "wendy's", "wendy",
+    "pizza hut", "domino", "papa john", "little caesar",
+    "taco bell", "chipotle", "qdoba", "moe's southwest",
+    "popeyes", "church's chicken", "chick-fil-a", "chick fil a",
+    "five guys", "shake shack", "in-n-out", "whataburger",
+    "white castle", "sonic", "arby's", "arby", "carl's jr",
+    "hardee's", "hardee", "jack in the box", "del taco",
+    "long john silver", "a&w", "dairy queen", "baskin robbins",
+    "dunkin", "krispy kreme", "tim horton", "panda express",
 ]
 
+# COFFEE CHAINS - Global
+GLOBAL_COFFEE = [
+    "starbucks", "costa coffee", "costa", "coffee bean",
+    "peet's coffee", "peet", "caribou coffee", "caribou",
+    "dunkin", "tim hortons", "tim horton", "second cup",
+    "gloria jean", "the coffee club", "cafe nero", "nero",
+    "pret a manger", "pret", "eat.", "paul bakery",
+]
+
+# CASUAL DINING - Global
+GLOBAL_CASUAL_DINING = [
+    "applebee's", "applebee", "chili's", "chili", "tgi friday",
+    "olive garden", "red lobster", "outback steakhouse", "outback",
+    "buffalo wild wings", "hooters", "denny's", "denny",
+    "ihop", "cheesecake factory", "california pizza kitchen", "cpk",
+    "p.f. chang", "pf chang", "benihana", "hard rock cafe",
+    "planet hollywood", "rainforest cafe", "cracker barrel",
+]
+
+# ASIAN CHAINS - Global/Regional
+GLOBAL_ASIAN_CHAINS = [
+    "yoshinoya", "sukiya", "matsuya", "tenya", "coco ichibanya",
+    "ichiran", "ippudo", "ajisen", "marugame udon", "marugame",
+    "genki sushi", "sushiro", "kura sushi", "hamazushi",
+    "pepper lunch", "mos burger", "freshness burger",
+    "din tai fung", "tim ho wan", "crystal jade", "paradise dynasty",
+    "haidilao", "xiabu xiabu", "hai di lao",
+]
+
+# EUROPEAN CHAINS
+EUROPEAN_CHAINS = [
+    "greggs", "pret a manger", "eat.", "leon", "wasabi",
+    "itsu", "yo! sushi", "wagamama", "nando's", "nando",
+    "pizza express", "ask italian", "prezzo", "zizzi",
+    "bella italia", "cafe rouge", "strada", "frankie & benny",
+    "gourmet burger kitchen", "gbk", "byron burger", "five guys",
+    "patisserie valerie", "paul", "le pain quotidien",
+    "vapiano", "nordsee", "wienerwald", "block house",
+    "l'osteria", "hans im glück", "hans im gluck",
+    "flunch", "hippopotamus", "courtepaille", "buffalo grill",
+    "quick", "brioche dorée", "brioche doree", "paul",
+    "autogrill", "spontini", "rossopomodoro", "cioccolatitaliani",
+    "old wild west", "america graffiti", "roadhouse",
+]
+
+# MIDDLE EASTERN CHAINS
+MIDDLE_EAST_CHAINS = [
+    "al baik", "albaik", "shawarma plus", "operation falafel",
+    "just falafel", "zaroob", "firas sweets", "arz lebanese",
+]
+
+# CONVENIENCE STORES & SUPERMARKETS
+CONVENIENCE_CHAINS = [
+    "7-eleven", "7 eleven", "familymart", "family mart",
+    "lawson", "circle k", "am/pm", "ampm", "wawa",
+    "sheetz", "speedway", "cumberland farms", "kwik trip",
+]
+
+# BAKERY & DESSERT CHAINS - Global
+GLOBAL_DESSERT_CHAINS = [
+    "cinnabon", "auntie anne", "wetzel's pretzel", "wetzel",
+    "godiva", "lindt", "sees candies", "garrett popcorn",
+    "cold stone", "marble slab", "magnum", "haagen-dazs", "haagen dazs",
+    "ben & jerry", "ben and jerry", "tcby", "pinkberry",
+    "red mango", "tutti frutti", "yogurtland",
+]
+
+# ========= SINGAPORE-SPECIFIC CHAINS =========
+
+SINGAPORE_CHAINS = [
+    # Local Fast Food / Casual
+    "ya kun", "yakun", "toast box", "killiney", "fun toast",
+    "old chang kee", "old changkee", "curry times",
+    "chicken rice shop", "the chicken rice shop",
+    
+    # Local Cafe Chains
+    "wang cafe", "ya kun kaya toast", "tong ah eating house",
+    "chin mee chin", "heap seng leong",
+    
+    # Asian Chain Restaurants (SG/Regional)
+    "paradise dynasty", "crystal jade", "din tai fung",
+    "imperial treasure", "putien", "canton paradise",
+    "four seasons", "swensen", "swensen's", "pizza hut",
+    "saizeriya", "ajisen ramen", "ippudo", "ramen champion",
+    "hokkaido ramen santouka", "tamoya udon", "men-ichi",
+    
+    # Bubble Tea & Dessert Chains
+    "koi", "koi cafe", "liho", "gong cha", "tiger sugar",
+    "chicha san chen", "each a cup", "playmade", "bober tea",
+    "milksha", "mxc", "r&b tea", "itea", "sharetea",
+    "meetfresh", "blackball", "quickly", "mr bean",
+    
+    # Bakery Chains (SG)
+    "breadtalk", "paris baguette", "four leaves", "bengawan solo",
+    "sunshine bakery", "cake spade", "barcook bakery",
+    
+    # Western Fast Casual (SG)
+    "stuff'd", "stuffd", "mcdonald's", "burger king", "mos burger",
+    "subway", "carl's jr", "popeyes", "texas chicken",
+    "long john silver's", "a&w", "wendy's",
+    
+    # Local Restaurant Chains
+    "soup spoon", "the soup spoon", "pastamania", "canadian pizza",
+    "spizza", "peperoni pizzeria", "morganfield's", "morganfield",
+    "han's", "hans", "delifrance", "délifrance",
+    "botak jones", "army stew", "seoul garden", "shaburi",
+    "hai di lao", "haidilao", "beauty in the pot",
+    "dian xiao er", "jumbo seafood", "no signboard",
+    "long beach seafood", "palm beach seafood",
+    
+    # Halal Chains
+    "nasi lemak ayam taliwang", "warong nasi pariaman",
+    "hjh maimunah", "zam zam", "victory restaurant",
+]
+
+# Hawker centres and food courts
 HAWKER_CENTRE_KEYWORDS = [
-    "hawker centre", "hawker center",
-    "food centre", "food center",
-    "food court", "market & food centre",
-    "kopitiam", "coffee shop",
+    "hawker centre", "hawker center", "food centre", "food center",
+    "food court", "market & food centre", "kopitiam", "coffee shop",
+    "food republic", "food opera", "food junction", "koufu",
+]
+
+# Dessert keywords for filtering
+DESSERT_KEYWORDS = [
+    "ice cream", "gelato", "froyo", "frozen yogurt",
+    "dessert bar", "sweet", "cake shop", "cupcake",
+    "donut", "doughnut", "candy", "chocolate shop",
 ]
 
 st.set_page_config(
@@ -91,7 +215,7 @@ BASE_CSS = """
         margin-top: 0 !important;
     }
     
-  /* Section headers with subtle glow effect */
+    /* Section headers with subtle glow effect */
     .section-header {
         font-size: 16px !important;
         font-weight: 700 !important;
@@ -103,10 +227,11 @@ BASE_CSS = """
         background: linear-gradient(135deg, rgba(255, 217, 61, 0.08) 0%, rgba(255, 217, 61, 0.02) 100%) !important;
         border-radius: 12px !important;
         border: 1px solid rgba(255, 217, 61, 0.2) !important;
-        display: block !important;
-        width: fit-content !important;
+        display: table !important;
         text-align: center !important;
     }
+
+    p, label { color: #e5e7eb !important; }
 
     /* Background */
     .main, .main .block-container {
@@ -387,13 +512,15 @@ def get_place_latlng(place_id: str) -> Tuple[float, float]:
     return float(loc["lat"]), float(loc["lng"])
 
 
-def autocomplete_places(query: str, max_results: int = 5) -> List[Dict[str, Any]]:
+def autocomplete_places(query: str, region: str = None, max_results: int = 5) -> List[Dict[str, Any]]:
     """Places Autocomplete: get candidate locations."""
     params = {
         "key": API_KEY,
         "input": query,
-        "region": "sg",
     }
+    if region:
+        params["region"] = region
+        
     resp = requests.get(PLACES_AUTOCOMPLETE_URL, params=params, timeout=10)
     resp.raise_for_status()
     data = resp.json()
@@ -433,18 +560,18 @@ def get_nearby_places(
     lat: float,
     lng: float,
     radius: int,
-    search_type: str = "All (Food & Drinks)",
+    search_type: str = "All",
     cuisine_filter: str = "All Cuisines",
 ) -> List[Dict[str, Any]]:
     """Use Places Nearby Search to get eateries based on type and cuisine filter."""
     
-    # Map user selection to Google Places API types - MORE AGGRESSIVE
-    if search_type == "Food only":
-        place_types = ["restaurant"]  # Only restaurants, no delivery/takeaway
-    elif search_type == "Drinks only":
-        place_types = ["cafe", "bar"]
-    else:  # "All (Food & Drinks)"
-        place_types = ["restaurant", "cafe"]  # Exclude meal_delivery and meal_takeaway
+    # Map user selection to Google Places API types
+    if search_type == "Bars only":
+        place_types = ["bar", "night_club"]
+    elif search_type == "Desserts only":
+        place_types = ["bakery", "cafe"]
+    else:  # "All"
+        place_types = ["restaurant", "cafe", "bar"]
 
     combined: Dict[str, Dict[str, Any]] = {}
 
@@ -459,6 +586,10 @@ def get_nearby_places(
         # Add cuisine-specific keyword if not "All Cuisines"
         if cuisine_filter != "All Cuisines":
             params["keyword"] = cuisine_filter.lower()
+        
+        # Add dessert keyword for desserts only
+        if search_type == "Desserts only":
+            params["keyword"] = "dessert ice cream gelato cake pastry"
 
         while True:
             resp = requests.get(PLACES_NEARBY_URL, params=params, timeout=10)
@@ -485,6 +616,25 @@ def get_nearby_places(
 
 # ========= Filtering / scoring =========
 
+def get_chain_blacklist(mode: str) -> List[str]:
+    """Get the appropriate chain blacklist based on mode."""
+    global_chains = (
+        GLOBAL_FAST_FOOD +
+        GLOBAL_COFFEE +
+        GLOBAL_CASUAL_DINING +
+        GLOBAL_ASIAN_CHAINS +
+        EUROPEAN_CHAINS +
+        MIDDLE_EAST_CHAINS +
+        CONVENIENCE_CHAINS +
+        GLOBAL_DESSERT_CHAINS
+    )
+    
+    if mode == "Singapore":
+        return global_chains + SINGAPORE_CHAINS
+    else:  # Global mode
+        return global_chains
+
+
 def filter_and_score_places(
     places: List[Dict[str, Any]],
     min_rating: float,
@@ -492,8 +642,10 @@ def filter_and_score_places(
     price_filter: str,
     center_lat: float,
     center_lng: float,
+    search_type: str,
+    mode: str,
 ) -> List[Dict[str, Any]]:
-    """Apply filters and score places."""
+    """Apply filters and score places - AGGRESSIVE."""
 
     def haversine_m(lat1, lon1, lat2, lon2) -> float:
         R = 6371000
@@ -504,6 +656,9 @@ def filter_and_score_places(
         c = 2 * math.atan2(math.sqrt(a), math.sqrt(1 - a))
         return R * c
 
+    # Get appropriate chain blacklist
+    chain_blacklist = get_chain_blacklist(mode)
+    
     filtered: List[Dict[str, Any]] = []
 
     for p in places:
@@ -516,33 +671,42 @@ def filter_and_score_places(
         plat, plng = loc.get("lat"), loc.get("lng")
         types = p.get("types", [])
 
-        # Exclude chains
-        if any(k in name for k in FAST_FOOD_KEYWORDS):
+        # AGGRESSIVE: Exclude chains based on mode
+        if any(k in name for k in chain_blacklist):
             continue
         
-        # Exclude obvious centres / markets
-        if any(k in name for k in HAWKER_CENTRE_KEYWORDS):
-            continue
+        # Exclude obvious centres / markets (mainly for Singapore)
+        if mode == "Singapore":
+            if any(k in name for k in HAWKER_CENTRE_KEYWORDS):
+                continue
         
         # Exclude delivery-only places
         if any(k in name for k in DELIVERY_ONLY_KEYWORDS):
             continue
         
-        # More aggressive: exclude if it's ONLY meal_delivery or meal_takeaway
-        if "meal_delivery" in types and "restaurant" not in types and "cafe" not in types:
+        # AGGRESSIVE: Exclude if it's ONLY meal_delivery or meal_takeaway
+        if "meal_delivery" in types and "restaurant" not in types and "cafe" not in types and "bar" not in types:
             continue
-        if "meal_takeaway" in types and "restaurant" not in types and "cafe" not in types:
+        if "meal_takeaway" in types and "restaurant" not in types and "cafe" not in types and "bar" not in types:
             continue
+        
+        # If searching for food (not desserts/bars), exclude dessert-only places
+        if search_type == "All":
+            if any(k in name for k in DESSERT_KEYWORDS) and "restaurant" not in types:
+                continue
             
         if rating is None or plat is None or plng is None:
             continue
         if rating < min_rating or reviews < min_reviews:
             continue
 
+        # AGGRESSIVE PRICE FILTERING
         if price_filter == "Cheap only (Google 0–1)":
+            # Exclude places with missing price data OR price > 1
             if price is None or price > 1:
                 continue
         elif price_filter == "Exclude expensive (Google >2)":
+            # Exclude places with price > 2 (but allow missing data)
             if price is not None and price > 2:
                 continue
 
@@ -629,6 +793,19 @@ st.markdown(
 
 st.markdown('<div class="section-spacer"></div>', unsafe_allow_html=True)
 
+# === MODE SELECTION ===
+st.markdown('<div class="section-header">Mode</div>', unsafe_allow_html=True)
+
+mode = st.radio(
+    "",
+    ["Singapore", "Global"],
+    index=0,
+    label_visibility="collapsed",
+    help="Singapore mode: Filters SG + global chains. Global mode: Filters global chains only."
+)
+
+st.markdown('<div class="section-spacer"></div>', unsafe_allow_html=True)
+
 # === LOCATION ===
 st.markdown('<div class="section-header">Location</div>', unsafe_allow_html=True)
 
@@ -656,7 +833,7 @@ if location_mode == "Use current location (GPS)":
 else:
     query = st.text_input(
         "Search for an area or landmark",
-        placeholder="e.g. Trastevere, Piazza Navona",
+        placeholder="e.g. Trastevere, Piazza Navona, Orchard Road",
     )
 
     if st.button("Search", key="search_places", use_container_width=True):
@@ -665,7 +842,9 @@ else:
             st.error("Please enter a location to search.")
         else:
             try:
-                candidates = autocomplete_places(q, max_results=5)
+                # Use region bias for Singapore mode
+                region = "sg" if mode == "Singapore" else None
+                candidates = autocomplete_places(q, region=region, max_results=5)
                 st.session_state["place_candidates"] = candidates
                 st.session_state["place_candidate_index"] = 0
             except Exception as e:
@@ -689,13 +868,13 @@ st.markdown('<div class="section-spacer"></div>', unsafe_allow_html=True)
 # === FILTERS ===
 st.markdown('<div class="section-header">Preferences</div>', unsafe_allow_html=True)
 
-# Food/Drink type filter
+# Type filter - simplified and more meaningful
 search_type = st.selectbox(
     "Type",
     [
-        "All (Food & Drinks)",
-        "Food only",
-        "Drinks only",
+        "All",
+        "Bars only",
+        "Desserts only",
     ],
     index=0,
 )
@@ -802,6 +981,8 @@ if go:
                     price_filter=price_filter,
                     center_lat=effective_lat,
                     center_lng=effective_lng,
+                    search_type=search_type,
+                    mode=mode,
                 )
 
                 if not ranked:
@@ -858,7 +1039,7 @@ if st.session_state.get("show_results", False) and st.session_state.get("results
         if price is None:
             badge_line.append("Price unknown")
         else:
-            price_symbols = ["$", "$", "$$", "$$", "$$$"]
+            price_symbols = ["$", "$", "$", "$", "$$"]
             badge_line.append(f"{price_symbols[min(price, 4)]}")
 
         if badge_line:
