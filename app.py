@@ -91,7 +91,7 @@ BASE_CSS = """
         margin-top: 0 !important;
     }
     
-   /* Section headers with subtle glow effect */
+  /* Section headers with subtle glow effect */
     .section-header {
         font-size: 16px !important;
         font-weight: 700 !important;
@@ -630,7 +630,7 @@ st.markdown(
 st.markdown('<div class="section-spacer"></div>', unsafe_allow_html=True)
 
 # === LOCATION ===
-st.markdown('<div class="section-header">Location</div>', unsafe_allow_html=True)
+st.markdown('<div class="section-header-wrapper"><div class="section-header">Location</div></div>', unsafe_allow_html=True)
 
 location_mode = st.radio(
     "",
@@ -687,7 +687,7 @@ else:
 st.markdown('<div class="section-spacer"></div>', unsafe_allow_html=True)
 
 # === FILTERS ===
-st.markdown('<div class="section-header">Preferences</div>', unsafe_allow_html=True)
+st.markdown('<div class="section-header-wrapper"><div class="section-header">Preferences</div></div>', unsafe_allow_html=True)
 
 # Food/Drink type filter
 search_type = st.selectbox(
