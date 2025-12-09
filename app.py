@@ -91,22 +91,22 @@ BASE_CSS = """
         margin-top: 0 !important;
     }
     
-    /* Section headers with subtle glow effect */
+   /* Section headers with subtle glow effect */
     .section-header {
         font-size: 16px !important;
         font-weight: 700 !important;
         text-transform: uppercase !important;
         letter-spacing: 1.5px !important;
         color: #ffd93d !important;
-        margin: 32px 0 20px 0 !important;
+        margin: 32px auto 20px auto !important;
         padding: 12px 24px !important;
         background: linear-gradient(135deg, rgba(255, 217, 61, 0.08) 0%, rgba(255, 217, 61, 0.02) 100%) !important;
         border-radius: 12px !important;
         border: 1px solid rgba(255, 217, 61, 0.2) !important;
-        display: inline-block !important;
+        display: block !important;
+        width: fit-content !important;
+        text-align: center !important;
     }
-
-    p, label { color: #e5e7eb !important; }
 
     /* Background */
     .main, .main .block-container {
