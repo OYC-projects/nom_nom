@@ -1,0 +1,8 @@
+[theme]
+primaryColor = "#ffe066"          # mellow yellow
+backgroundColor = "#121212"       # charcoal background
+secondaryBackgroundColor = "#0f0f0f"
+textColor = "#121212"             # dark charcoal text on buttons
+font = "Segoe UI"
+headingFont = "Segoe UI"
+codeFont = "monospace"
